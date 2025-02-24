@@ -5,28 +5,23 @@ def binarySearch(arr: list, target: int) -> int:
     left = 0
     right = len(arr) - 1
 
-    def AuxbinarySearch(left, right, arr, target, count):
+    def AuxbinarySearch(left, right, arr, target):
         
-        mid = (right-left)//2
-        time.sleep(2)
-        print(left, right, mid, arr, target, count, arr[mid])
+        mid = (right+left)//2
+        print(left, right, mid, arr, target, arr[mid])
 
         if arr[mid] == target:
-
-            count += mid
             print('i enter ')
-            return count
+            return mid 
         
         elif arr[mid] < target:
-
-            count +=mid
             print('mid < target')
-            return AuxbinarySearch(mid, right, arr[mid:], target, count)
+            return AuxbinarySearch(mid+1, right, arr, target)
         else:
             print('mid > target')
-            return AuxbinarySearch(left, left+mid, arr[:mid+1], target, count)
+            return AuxbinarySearch(left, mid-1, arr, target)
 
-    a =  AuxbinarySearch(left, right, arr, target, count=0)
+    a =  AuxbinarySearch(left, right, arr, target)
 
     return a, arr[a]
     
