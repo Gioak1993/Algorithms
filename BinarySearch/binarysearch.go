@@ -11,6 +11,8 @@ func main () {
 
 }
 
+
+
 func BinarySearchHelper (A []int, target int, left int, right int) int {
 
 	mid := (right+left)/2

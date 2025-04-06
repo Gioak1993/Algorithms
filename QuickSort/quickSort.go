@@ -8,7 +8,7 @@ func main () {
 
 	x := []int{1,2,5,3,5,7,4,7,4,34,234,6,56,4,3,23,2,5,7,6,7,78,7,5,545,43,453,3,52,35,23,5}
 	fmt.Print(QuickSort(x))
-	fmt.Print(QuickSortDescending (x))
+	fmt.Print(QuickSortDescending(x))
 
 }
 
